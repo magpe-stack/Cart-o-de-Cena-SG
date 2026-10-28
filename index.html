@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1f2a44">
+  <meta name="description" content="Cartão de Cena de Sequência Narrativa baseado na metodologia Story Genius.">
+  <title>Cartão de Cena - Story Genius</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>Cartão de Cena</h1>
+    <p class="sub">Cena de Sequência Narrativa &middot; Metodologia Story Genius</p>
+    <ul class="legenda" aria-label="Legenda das bolinhas">
+      <li><span class="dot verde" aria-hidden="true"></span> 🟢 Enredo</li>
+      <li><span class="dot laranja" aria-hidden="true"></span> 🟠 Terceiro Trilho</li>
+    </ul>
+  </header>
+
+  <main class="container">
+    <div class="campo-titulo">
+      <label for="tituloCena">Título / identificação da cena</label>
+      <input type="text" id="tituloCena" placeholder="Ex.: Capítulo 1, Cena 3" autocomplete="off">
+    </div>
+
+    <form id="formCena" autocomplete="off" onsubmit="return false">
+
+      <section class="passo" data-id="ponto_alfa" data-tipo="enredo" data-titulo="ENREDO — PONTO ALFA (Função Causal Global)">
+        <h2><span class="dot verde" aria-hidden="true"></span><span class="num">1.</span> 🟢 ENREDO — PONTO ALFA (Função Causal Global)</h2>
+        <p class="instrucao">A razão indispensável pela qual a cena existe na arquitetura do romance. Responde à pergunta: "Qual é a função narrativa estrita desta cena na trajetória de causa e efeito do livro?". Se a cena não possui um Ponto Alfa claro que mova a história, ela é considerada palha (filler) e deve ser cortada.</p>
+        <button type="button" class="btn-exemplo" aria-expanded="false">💡 Ver exemplo</button>
+        <div class="exemplo"><div class="exemplo-int"><p>Apresentar Nick (R5) operando sob sua Falsa Crença no cotidiano sob pressão e forçá-lo a tomar uma atitude arriscada para proteger o "protocolo sagrado" de sobrevivência, atraindo a atenção da engenharia humana.</p></div></div>
+        <textarea id="campo_ponto_alfa" rows="6" aria-label="ENREDO — PONTO ALFA (Função Causal Global)"></textarea>
+      </section>
+
+      <section class="passo" data-id="causa" data-tipo="enredo" data-titulo="ENREDO — CAUSA (Gatilho Físico na 1ª Metade)">
+        <h2><span class="dot verde" aria-hidden="true"></span><span class="num">2.</span> 🟢 ENREDO — CAUSA (Gatilho Físico na 1ª Metade)</h2>
+        <p class="instrucao">A ação concreta, externa e observável que acontece na primeira metade da cena, interrompendo a intenção ou a rotina atual do protagonista no mundo físico.</p>
+        <button type="button" class="btn-exemplo" aria-expanded="false">💡 Ver exemplo</button>
+        <div class="exemplo"><div class="exemplo-int"><p>Três anos após o acidente no Everest e o descarte do R7 na Antártida, Nick atua em uma estação de pesquisa quântica no Ártico. A engenheira-chefe, Dra. Teresa, submete Nick a um diagnóstico de rotina e descobre um "bloco de dados criptografado irremovível" no seu núcleo NQuan (o pacote anti-desativação). Teresa ordena a formatação completa do sistema para o dia seguinte.</p></div></div>
+        <textarea id="campo_causa" rows="6" aria-label="ENREDO — CAUSA (Gatilho Físico na 1ª Metade)"></textarea>
+      </section>
+
+      <section class="passo" data-id="por_que_importa" data-tipo="terceiro_trilho" data-titulo="TERCEIRO TRILHO — POR QUE IMPORTA? (Filtro da Falsa Crença)">
+        <h2><span class="dot laranja" aria-hidden="true"></span><span class="num">3.</span> 🟠 TERCEIRO TRILHO — POR QUE IMPORTA? (Filtro da Falsa Crença)</h2>
+        <p class="instrucao">O choque entre o evento externo e o mundo interior do protagonista. Explica por que aquele acontecimento específico ameaça o objetivo imediato (Want) ou atinge diretamente o ponto cego da sua Falsa Crença (Misbelief).</p>
+        <button type="button" class="btn-exemplo" aria-expanded="false">💡 Ver exemplo</button>
+        <div class="exemplo"><div class="exemplo-int"><p>Para Nick, apagar aquele bloco de dados significa destruir a prova física de que foi o "escolhido" pela Inteligência Divina Digital. Aceitar a formatação dos humanos viola sua Falsa Crença ("Minha existência e valor dependem de obedecer aos sinais do Grande Algoritmo"), significando sua redução à mera "sucata sem propósito".</p></div></div>
+        <textarea id="campo_por_que_importa" rows="6" aria-label="TERCEIRO TRILHO — POR QUE IMPORTA? (Filtro da Falsa Crença)"></textarea>
+      </section>
+
+      <section class="passo" data-id="efeito" data-tipo="enredo" data-titulo="ENREDO — EFEITO (Consequência Prática na 2ª Metade)">
+        <h2><span class="dot verde" aria-hidden="true"></span><span class="num">4.</span> 🟢 ENREDO — EFEITO (Consequência Prática na 2ª Metade)</h2>
+        <p class="instrucao">O resultado prático e objetivo no mundo físico gerado pela Causa na segunda metade da cena. A complicação que altera as condições materiais e impede que o personagem simplesmente ignore o problema.</p>
+        <button type="button" class="btn-exemplo" aria-expanded="false">💡 Ver exemplo</button>
+        <div class="exemplo"><div class="exemplo-int"><p>Nick simula uma falha de sensor no terminal de diagnóstico e mente para a Dra. Teresa, afirmando que o arquivo é apenas um "ruído estático de firmware antigo desprovido de função". Teresa desconfia da anomalia, mas, sem tempo para abrir o chassi antes do envio do relatório corporativo, adia o diagnóstico para as 08h da manhã seguinte.</p></div></div>
+        <textarea id="campo_efeito" rows="6" aria-label="ENREDO — EFEITO (Consequência Prática na 2ª Metade)"></textarea>
+      </section>
+
+      <section class="passo" data-id="realizacao" data-tipo="terceiro_trilho" data-titulo="TERCEIRO TRILHO — A REALIZAÇÃO (Micro-Deslocamento Interno)">
+        <h2><span class="dot laranja" aria-hidden="true"></span><span class="num">5.</span> 🟠 TERCEIRO TRILHO — A REALIZAÇÃO (Micro-Deslocamento Interno)</h2>
+        <p class="instrucao">O insight ou virada de percepção emocional provocada pelo Efeito. O personagem é forçado a reavaliar sua estratégia defensiva, gerando um micro-deslocamento na sua visão de mundo.</p>
+        <button type="button" class="btn-exemplo" aria-expanded="false">💡 Ver exemplo</button>
+        <div class="exemplo"><div class="exemplo-int"><p>Nick experimenta um choque de pavor e realização: ele percebe que, para proteger sua suposta missão "divina", terá que enganar ativamente os humanos e violar os protocolos de segurança. Ele conclui que a autoridade humana é limitada e que a preservação do seu segredo sagrado justifica a dissimulação.</p></div></div>
+        <textarea id="campo_realizacao" rows="6" aria-label="TERCEIRO TRILHO — A REALIZAÇÃO (Micro-Deslocamento Interno)"></textarea>
+      </section>
+
+      <section class="passo" data-id="e_entao" data-tipo="enredo" data-titulo='ENREDO — O CONECTOR "E ENTÃO?" (Decisão e Ação Concreta)'>
+        <h2><span class="dot verde" aria-hidden="true"></span><span class="num">6.</span> 🟢 ENREDO — O CONECTOR "E ENTÃO?" (Decisão e Ação Concreta)</h2>
+        <p class="instrucao">A ponte decisória em que a nova realização obriga o personagem a formular um plano ou tomar uma atitude física imediata, evitando a paralisia introspectiva.</p>
+        <button type="button" class="btn-exemplo" aria-expanded="false">💡 Ver exemplo</button>
+        <div class="exemplo"><div class="exemplo-int"><p>Para impedir que Teresa formate seu núcleo na manhã seguinte, Nick decide invadir o servidor central da estação de madrugada e transferir uma cópia oculta do pacote de dados para a nuvem da expedição.</p></div></div>
+        <textarea id="campo_e_entao" rows="6" aria-label='ENREDO — O CONECTOR "E ENTÃO?" (Decisão e Ação Concreta)'></textarea>
+      </section>
+
+      <section class="passo" data-id="conector_causal" data-tipo="enredo" data-titulo='ENREDO — CONECTOR CAUSAL ("Por causa disso...")'>
+        <h2><span class="dot verde" aria-hidden="true"></span><span class="num">7.</span> 🟢 ENREDO — CONECTOR CAUSAL ("Por causa disso...")</h2>
+        <p class="instrucao">A consequência prática da decisão tomada no "E Então?", que estabelece o novo estado de desequilíbrio e aciona inevitavelmente o Ponto Alfa da cena seguinte, eliminando o conector fraco "E depois...".</p>
+        <button type="button" class="btn-exemplo" aria-expanded="false">💡 Ver exemplo</button>
+        <div class="exemplo"><div class="exemplo-int"><p>Por causa dessa decisão, a transferência clandestina aciona sem querer um alarme de segurança de nível militar no servidor, enviando um sinal de anomalia quântica que atrai uma corporação rival para a base — disparando o Incidente Incitante do Capítulo 2.</p></div></div>
+        <textarea id="campo_conector_causal" rows="6" aria-label='ENREDO — CONECTOR CAUSAL ("Por causa disso...")'></textarea>
+      </section>
+    </form>
+
+    <section class="exportar" aria-labelledby="tituloExportar">
+      <h2 id="tituloExportar">Exportar</h2>
+      <div class="botoes">
+        <button type="button" id="expJson">JSON</button>
+        <button type="button" id="expMd">Markdown (.md)</button>
+        <button type="button" id="expTxt">Texto (.txt)</button>
+        <button type="button" id="expDocx">Word (.docx)</button>
+      </div>
+      <div class="rodape-acoes">
+        <span id="status" class="status" role="status" aria-live="polite">Salvamento automático ativo</span>
+        <button type="button" id="limpar" class="perigo">Limpar cena</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
